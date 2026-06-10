@@ -65,7 +65,7 @@ tombol.addEventListener("click", function () {
 
     teks.style.animation =
         `glow 3s ease-in-out infinite alternate,
-         ${pilih} 40s ease-in-out infinite alternate`;
+         ${pilih} 30s ease-in-out infinite alternate`;
 
     document.body.appendChild(teks);
 }
@@ -90,5 +90,23 @@ setInterval(() => {
     }, 10000);
 
 }, 700);
+
+const loveBtn = document.getElementById("loveBtn");
+const pesanLove = document.getElementById("pesanLove");
+
+loveBtn.addEventListener("click", () => {
+
+    pesanLove.style.display = "block";
+
+});
+
+function tutupLove(){
+    alert("Tombol berfungsi");
+    document.getElementById("pesanLove").style.display = "none";
+}
+
+document.getElementById("btnTutup").addEventListener("click", () => {
+    document.getElementById("pesanLove").style.display = "none";
+});
 
 });
